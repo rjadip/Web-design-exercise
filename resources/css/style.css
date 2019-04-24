@@ -34,10 +34,11 @@ html {
 /*--------------------------------------------*/
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    background-image: linear-gradient(#000000b3, #000000b3), url(img/hero.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
+    background-attachment: fixed;
 }
 
 .hero-text-box {
@@ -78,7 +79,7 @@ h2 {
     font-size: 180%;
     word-spacing: 2px;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     border-spacing: 1px;
 }
 
@@ -149,12 +150,6 @@ h2::after {
     padding: 1%;
 }
 
-.box img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
 .box p {
     font-size: 90%;
     line-height: 145%;
@@ -187,6 +182,20 @@ section {
     display: block;
     color: #e67e22;
     margin-bottom: 10px;
+
+}
+
+.icon-small {
+    display: inline-block;
+    font-size: 120%;
+    text-align: center;
+    color: #e67e22;
+    width: 25px;
+    /*secret to align text and icons*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -4px;
+    margin-right: 15px;
 }
 
 /*--------------------------------------------*/
@@ -284,6 +293,17 @@ section {
     margin-right: 20px;
 }
 
+.btn-app {
+    height: 50px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.btn-app:link,
+.btn-app:visited {
+    border: 0;
+}
+
 /*--------------------------------------------*/
 /* CITIES */
 /*--------------------------------------------*/
@@ -294,9 +314,244 @@ section {
     font-size: 90%;
 }
 
-.icon-small {
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/*--------------------------------------------*/
+/* TESTIMONIALS */
+/*--------------------------------------------*/
+
+.section-testimonials {
+    background-image: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+    text-align: justify;
+}
+
+cite {
+    display: block;
+    font-size: 90%;
+    margin-top: 25px;
+}
+
+blockquote::before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: 0x;
+    left: -3px;
+}
+
+cite img {
     display: inline-block;
-    font-size: 120%;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/*--------------------------------------------*/
+/* SIGN UP */
+/*--------------------------------------------*/
+
+.section-plans {
+    background-color: #f4f4f4;
+}
+
+.plan-box {
+    background-color: white;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 3%;
+    box-shadow: 0px 2px 2px #b8b5b5;
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-box div:first-child {
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child {
+    text-align: center;
+    border: 0;
+}
+
+.plan-box ul {
+    list-style: none;
+}
+
+.plan-box ul li {
+    padding: 5px 0;
+}
+
+.plan-price {
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #e67e22;
+}
+
+.plan-price span {
+    font-size: 30%;
+    font-weight: 300;
+}
+
+.plan-price-meal {
+    font-size: 80%;
+}
+
+.icon-small {
+    width: 20px;
+    margin-right: 20px;
+}
+
+/*--------------------------------------------*/
+/* FORM */
+/*--------------------------------------------*/
+
+.contact-form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-weight: 100;
+}
+
+textarea {
+    height: 150px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+
+*:focus {
+    outline: none;
+}
+
+/*Experiment color selection */
+
+select option[value='friends'] {
+    background: #e67e22;
+}
+
+select option[value='search'] {
+    background: #cf6d17;
+}
+
+select option[value='ad'] {
+    background: #a15512;
+}
+
+select option[value='other'] {
+    background: #63350d;
+}
+
+/*--------------------------------------------*/
+/* Footer
+/*--------------------------------------------*/
+
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+    margin-bottom: 25px;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    color: #888;
+    border: 0;
+    transition: color 0.2s;
+
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+.ion-social-facebook:hover {
+    transition: color 0.4s;
+    color: #4267b2;
+}
+
+.ion-social-instagram:hover {
+    transition: color 0.4s;
+    color: #01d4b1;
+}
+
+.ion-social-googleplus:hover {
+    transition: color 0.4s;
+    color: #d34836;
+}
+
+.ion-social-twitter:hover {
+    transition: color 0.4s;
+    color: #38A1F3;
+}
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
 }
 
 /*--------------------------------------------*/
@@ -304,52 +559,71 @@ section {
 /*--------------------------------------------*/
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type=submit] {
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
     text-decoration: none;
-    margin-right: 20px;
-    border-radius: 20px;
-    border: 1px #e67e22 solid;
-    transition: 0.5s background-color;
-}
-
-.btn:hover,
-.btn:active {
-    background-color: #cf6d17;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit] {
     background-color: #e67e22;
+    border: 1px solid #e67e22;
     color: #fff;
-    transition: 0.5s background-color;
-}
-
-.btn-full:hover {
-    background-color: #cf6d17;
-}
-
-.btn-full:active {
-    background-color: #a15512;
+    margin-right: 15px;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #e67e22;
-    background-color: transparent;
+    border: 1px solid #e67e22;
     color: #e67e22;
-    transition: 0.5s background-color;
+}
+
+.btn:hover,
+input[type=submit]:hover {
+    background-color: #cf6d17;
+}
+
+.btn-full:hover,
+input[type=submit]:hover {
+    background-color: #cf6d17;
 }
 
 .btn-ghost:hover {
-    background-color: #cf6d17;
+    border: 1px solid #cf6d17;
     color: #fff;
 }
 
-.btn-ghost:active {
+.btn:active,
+.btn-full:active,
+.btn-ghost:active,
+input[type=submit]:active {
     background-color: #a15512;
+    border: 1px solid #a15512;
+}
+
+/*--------------------------------------------*/
+/* LINKS */
+/*--------------------------------------------*/
+
+a:link,
+a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: #e67e22 1px solid;
+    transition: .2s color, .2s border-bottom;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    padding-bottom: 2px;
+    border-bottom: transparent;
+    transition: .2s color, .2s border-bottom;
 }
