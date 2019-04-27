@@ -11,15 +11,15 @@
     <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
     <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
-</head>
 
 <body>
     <header>
         <nav>
             <div class="row">
                 <img src="resources/img/logo-white.png" alt="Omnifood logo" class="logo">
-                <!--                <img src="resources/img/logo.png" alt="Omnifood logo" class="logo"> -->
+                <img src="resources/img/logo.png" alt="Omnifood logo" class="logo-black">
                 <ul class="main-nav">
                     <li><a href="#">Food delivery</a></li>
                     <li><a href="#">How it Works</a></li>
@@ -30,18 +30,18 @@
         </nav>
         <div class="hero-text-box">
             <h1>Goodbye junk food.<br /> Hello super healthy meals</h1>
-            <a class="btn btn-full" href="#">I’m hungry</a>
-            <a class="btn btn-ghost" href="#">Show me more</a>
+            <a class="btn btn-full js--scroll-to-plans" href="#">I'm hungry</a>
+            <a class="btn btn-ghost js--scroll-to-start" href="#">Show me more</a>
         </div>
     </header>
 
-    <section class="section-featured">
+    <section class="section-featured js--section-features">
         <div class="row">
             <h2>Get food fast &mdash; not fast food.</h2>
             <p class="long-copy">
-                Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for
+                Hello, we're Omnifood, your new premium food delivery service. We know you’re always busy. No time for
                 cooking. So let
-                us take care of that, we’re really good at it, we promise!
+                us take care of that, we're really good at it, we promise!
             </p>
         </div>
         <div class="row">
@@ -82,6 +82,7 @@
                     containing over 100 delicious meals. It's up to you!
                 </p>
             </div>
+        </div>
     </section>
     <section class="section-meals">
         <ul class="meals-showcase clearfix">
@@ -140,9 +141,10 @@
                     <div>3</div>
                     <p>Enjoy your meal after less than 20 minutes. See you the next time!</p>
                 </div>
+                <a href="#" class="btn-app"><img src="resources/img/download-app.svg" alt="App store Button"></a>
+                <a href="#" class="btn-app"><img src="resources/img/download-app-android.png"
+                        alt="play store Button"></a>
             </div>
-            <a href="#" class="btn-app"><img src="resources/img/download-app.svg" alt="App store Button"></a>
-            <a href="#" class="btn-app"><img src="resources/img/download-app-android.png" alt="play store Button"></a>
         </div>
     </section>
 
@@ -394,6 +396,13 @@
             </div>
         </div>
     </footer>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
+    <script src="resources/js/script.js"></script>
 </body>
 
 </html>
